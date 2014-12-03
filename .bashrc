@@ -91,6 +91,9 @@ alias vi='vim'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
 
+# Github - hub alias
+eval "$(hub alias -s)"
+
 # X
 if [ "$(tty)" = "/dev/tty1" ]; then
     startx

@@ -148,6 +148,10 @@ bindsym $mod+3 workspace 3:mail
 bindsym $mod+4 workspace 4:chat
 bindsym $mod+5 workspace 5:misc
 
+# switch to workspace left/right
+bindsym Mod1+Shift+h workspace prev
+bindsym Mod1+Shift+l workspace next
+
 # move focused container to workspace
 bindsym $mod+Mod1+1 move container to workspace 1:term
 bindsym $mod+Mod1+2 move container to workspace 2:inet

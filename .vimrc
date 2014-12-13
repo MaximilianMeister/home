@@ -8,3 +8,6 @@ set expandtab
 " navigate vim tabs in screen
 :nmap <ESC>[5;5~ <C-PageUp>
 :nmap <ESC>[6;5~ <C-PageDown>
+
+:noremap <C-l> gt
+:noremap <C-h> gT

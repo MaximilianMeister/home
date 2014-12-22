@@ -65,3 +65,4 @@ URxvt*keysym.End: \033[4~
 URxvt*termName: screen-256color
 URxvt.termName: rxvt-unicode
 URxvt.title: terminal
+URxvt.iso14755: false

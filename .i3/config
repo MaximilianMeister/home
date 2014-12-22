@@ -168,7 +168,7 @@ assign [class="^Firefox$"] 1:inet
 assign [class="^URxvt$"] 2:term
 assign [class="^Thunderbird$"] 3:mail
 assign [class="^Xchat$"] 4:chat
-assign [class="^mumble$"] 5:mumble
+assign [class="^Mumble$"] 5:mumble
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)

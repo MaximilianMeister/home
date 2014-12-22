@@ -141,30 +141,34 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+workspace 1:inet output DVI-1
+workspace 3:mail output DVI-1
+
 # switch to workspace
-bindsym $mod+1 workspace 1:term
-bindsym $mod+2 workspace 2:inet
+bindsym $mod+1 workspace 1:inet
+bindsym $mod+2 workspace 2:term
 bindsym $mod+3 workspace 3:mail
 bindsym $mod+4 workspace 4:chat
-bindsym $mod+5 workspace 5:atrd
 
 # switch to workspace left/right
 bindsym Mod1+Shift+h workspace prev
 bindsym Mod1+Shift+l workspace next
 
 # move focused container to workspace
-bindsym $mod+Mod1+1 move container to workspace 1:term
-bindsym $mod+Mod1+2 move container to workspace 2:inet
+bindsym $mod+Mod1+1 move container to workspace 1:inet
+bindsym $mod+Mod1+2 move container to workspace 2:term
 bindsym $mod+Mod1+3 move container to workspace 3:mail
 bindsym $mod+Mod1+4 move container to workspace 4:chat
-bindsym $mod+Mod1+5 move container to workspace 5:atrd
 
 # custom clients on workspaces
-assign [class="^URxvt$"] 1:term
-assign [class="^Firefox$"] 2:inet
-assign [class="^com-(.*)-module-updater-gui-Updater$"] 3:atrd
+assign [class="^Firefox$"] 1:inet
+assign [class="^URxvt$"] 2:term
+assign [class="^Thunderbird$"] 3:mail
 assign [class="^Xchat$"] 4:chat
-assign [class="^Thunderbird$"] 5:mail
+
+# Move the current workspace to the next output
+# (effectively toggles when you only have two outputs)
+bindsym $mod+Tab move workspace to output left
 
 # reload the configuration file
 bindsym $mod+c reload
@@ -215,6 +219,9 @@ bar {
     urgent_workspace #2f343a #900000 #ffffff
   }
 }
+
+# call randr
+exec --no-startup-id ~/.i3/scripts/randr.sh
 
 # set monitor shutdown
 exec --no-startup-id xset dpms 300 600 900

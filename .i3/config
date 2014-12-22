@@ -151,6 +151,9 @@ bindsym $mod+2 workspace 2:term
 bindsym $mod+3 workspace 3:mail
 bindsym $mod+4 workspace 4:chat
 bindsym $mod+5 workspace 5:mumble
+bindsym $mod+6 workspace 6:writer
+bindsym $mod+7 workspace 7:calc
+bindsym $mod+8 workspace 8:misc
 
 # switch to workspace left/right
 bindsym Mod1+Shift+h workspace prev
@@ -162,6 +165,9 @@ bindsym $mod+Mod1+2 move container to workspace 2:term
 bindsym $mod+Mod1+3 move container to workspace 3:mail
 bindsym $mod+Mod1+4 move container to workspace 4:chat
 bindsym $mod+Mod1+5 move container to workspace 5:mumble
+bindsym $mod+Mod1+6 move container to workspace 6:writer
+bindsym $mod+Mod1+7 move container to workspace 7:calc
+bindsym $mod+Mod1+8 move container to workspace 8:misc
 
 # custom clients on workspaces
 assign [class="^Firefox$"] 1:inet
@@ -169,6 +175,8 @@ assign [class="^URxvt$"] 2:term
 assign [class="^Thunderbird$"] 3:mail
 assign [class="^Xchat$"] 4:chat
 assign [class="^Mumble$"] 5:mumble
+assign [class="^libreoffice-writer$"] 6:writer
+assign [class="^libreoffice-calc$"] 7:calc
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)
@@ -226,6 +234,12 @@ bar {
 
 # call randr
 exec --no-startup-id ~/.i3/scripts/randr.sh
+
+# call libreoffice writer
+exec --no-startup-id /usr/bin/libreoffice --writer /home/mmeister/Desktop/Berichtsheft.odt
+
+# call libreoffice calc
+exec --no-startup-id /usr/bin/libreoffice --calc
 
 # call clipboard manager
 exec --no-startup-id /usr/bin/parcellite

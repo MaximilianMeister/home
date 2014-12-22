@@ -227,6 +227,9 @@ bar {
 # call randr
 exec --no-startup-id ~/.i3/scripts/randr.sh
 
+# call clipboard manager
+exec --no-startup-id /usr/bin/parcellite
+
 # set monitor shutdown
 exec --no-startup-id xset dpms 300 600 900
 

@@ -143,12 +143,14 @@ bindsym $mod+a focus parent
 
 workspace 1:inet output DVI-1
 workspace 3:mail output DVI-1
+workspace 5:mumble output DVI-1
 
 # switch to workspace
 bindsym $mod+1 workspace 1:inet
 bindsym $mod+2 workspace 2:term
 bindsym $mod+3 workspace 3:mail
 bindsym $mod+4 workspace 4:chat
+bindsym $mod+5 workspace 5:mumble
 
 # switch to workspace left/right
 bindsym Mod1+Shift+h workspace prev
@@ -159,12 +161,14 @@ bindsym $mod+Mod1+1 move container to workspace 1:inet
 bindsym $mod+Mod1+2 move container to workspace 2:term
 bindsym $mod+Mod1+3 move container to workspace 3:mail
 bindsym $mod+Mod1+4 move container to workspace 4:chat
+bindsym $mod+Mod1+5 move container to workspace 5:mumble
 
 # custom clients on workspaces
 assign [class="^Firefox$"] 1:inet
 assign [class="^URxvt$"] 2:term
 assign [class="^Thunderbird$"] 3:mail
 assign [class="^Xchat$"] 4:chat
+assign [class="^mumble$"] 5:mumble
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)

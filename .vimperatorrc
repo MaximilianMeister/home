@@ -1,3 +1,6 @@
+set hintchars=hjklasdfgyuiopqwertnmzxcvb
+hi Hint font-size:100%;color:white;background-color:blue;
+hi HintElem font-size:100%, color:white;background-color:LightGrey
 noremap <C-l> gt
 noremap <C-h> gT
 noremap <BS> H

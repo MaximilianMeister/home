@@ -74,6 +74,10 @@ On_IWhite='\e[0;107m' # White
 # history
 export HISTSIZE=2000
 
+# go development
+export GOPATH=~/git/go
+export PATH=$PATH:~/git/go/bin
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"

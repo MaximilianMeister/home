@@ -141,6 +141,12 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Make the currently focused window a scratchpad
+bindsym $mod+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+plus scratchpad show
+
 workspace 1:inet output DVI-1
 workspace 3:mail output DVI-1
 workspace 5:mumble output DVI-1

@@ -115,6 +115,12 @@ bindsym $mod+Mod1+Down move down
 bindsym $mod+Mod1+Up move up
 bindsym $mod+Mod1+Right move right
 
+# Make the currently focused window a scratchpad
+bindsym $mod+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+plus scratchpad show
+
 # split in horizontal orientation
 #bindsym $mod+Mod1+h split h
 

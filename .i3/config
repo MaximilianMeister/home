@@ -63,7 +63,7 @@ mode "$mode_system" {
 }
 
 # enter state mode
-bindsym $mod+Mod1+e mode "$mode_system"
+bindsym $mod+e mode "$mode_system"
 
 # define colors
 # class			border	backgr.	text	indicator
@@ -189,7 +189,7 @@ bindsym $mod+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Mod1+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -241,7 +241,7 @@ exec --no-startup-id ~/.i3/scripts/randr.sh
 exec --no-startup-id /usr/bin/parcellite
 
 # set monitor shutdown
-exec --no-startup-id xset dpms 300 600 900
+# exec --no-startup-id xset dpms 300 600 900
 
 # set mouse speed
 exec --no-startup-id xset m 4/2 0

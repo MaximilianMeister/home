@@ -71,10 +71,6 @@ On_IPurple='\e[0;105m' # Purple
 On_ICyan='\e[0;106m' # Cyan
 On_IWhite='\e[0;107m' # White
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Prompt (Git)
 source $HOME/.git-prompt.sh
 if [[ $(tty) == *pts* ]]
@@ -90,13 +86,3 @@ alias l='ls --color=auto -la'
 alias vi='vim'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
-
-# Github - hub alias
-eval "$(hub alias -s)"
-
-# X
-if [ "$(tty)" = "/dev/tty1" ]; then
-    startx
-#    logout
-fi
-

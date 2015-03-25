@@ -74,17 +74,13 @@ On_IWhite='\e[0;107m' # White
 # history
 export HISTSIZE=2000
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 # Prompt (Git)
 source $HOME/.git-prompt.sh
 if [[ $(tty) == *pts* ]]
 then
-  PS1="\[$Green\]\t\[$Red\]-\[$BBlue\]\u\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$Black\]\n\$ "
+  PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$Black\]\n\$ "
 else
-  PS1="\[$Green\]\t\[$Red\]-\[$BBlue\]\u\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$White\]\n\$ "
+  PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$White\]\n\$ "
 fi
 
 # Alias
@@ -93,13 +89,4 @@ alias l='ls --color=auto -la'
 alias vi='vim'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
-
-# Github - hub alias
-eval "$(hub alias -s)"
-
-# X
-if [ "$(tty)" = "/dev/tty1" ]; then
-    startx
-#    logout
-fi
 

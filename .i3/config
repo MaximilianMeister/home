@@ -115,12 +115,6 @@ bindsym $mod+Mod1+Down move down
 bindsym $mod+Mod1+Up move up
 bindsym $mod+Mod1+Right move right
 
-# Make the currently focused window a scratchpad
-bindsym $mod+minus move scratchpad
-
-# Show the first scratchpad window
-bindsym $mod+plus scratchpad show
-
 # split in horizontal orientation
 #bindsym $mod+Mod1+h split h
 
@@ -153,9 +147,9 @@ bindsym $mod+minus move scratchpad
 # Show the first scratchpad window
 bindsym $mod+plus scratchpad show
 
-workspace 1:inet output DVI-1
-workspace 3:mail output DVI-1
-workspace 5:mumble output DVI-1
+#workspace 1:inet output DVI-1
+#workspace 3:mail output DVI-1
+#workspace 5:mumble output DVI-1
 
 # switch to workspace
 bindsym $mod+1 workspace 1:inet
@@ -241,10 +235,10 @@ bar {
 }
 
 # call randr
-exec --no-startup-id ~/.i3/scripts/randr.sh
+#exec --no-startup-id ~/.i3/scripts/randr.sh
 
 # call clipboard manager
-exec --no-startup-id /usr/bin/parcellite
+#exec --no-startup-id /usr/bin/parcellite
 
 # set monitor shutdown
 # exec --no-startup-id xset dpms 300 600 900
@@ -254,6 +248,9 @@ exec --no-startup-id xset m 4/2 0
 
 # disable system bell
 exec --no-startup-id xset b off
+
+# start polkit agent
+exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
 
 exec --no-startup-id feh --bg-tile ~/.i3/images/wallpaper.png
 exec --no-startup-id xautolock -time 5 -locker '~/.i3/scripts/exit lock' -secure

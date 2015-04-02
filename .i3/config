@@ -236,6 +236,7 @@ bar {
 
 # call randr
 #exec --no-startup-id ~/.i3/scripts/randr.sh
+exec --no-startup-id xrandr --output DisplayPort-0 --right-of DVI-0
 
 # call clipboard manager
 #exec --no-startup-id /usr/bin/parcellite

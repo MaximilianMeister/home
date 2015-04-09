@@ -83,6 +83,13 @@ else
   PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$White\]\n\$ "
 fi
 
+# GO
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+# PATH
+PATH=$PATH:/suse/mmeister/bin/
+
 # Alias
 alias ls='ls --color=auto'
 alias l='ls --color=auto -la'

@@ -175,6 +175,7 @@ bindsym $mod+Mod1+7 move container to workspace 7
 
 # custom clients on workspaces
 assign [class="^Firefox$"] 1:inet
+assign [class="^Chromium$"] 1:inet
 assign [class="^URxvt$"] 2:term
 assign [class="^Thunderbird$"] 3:mail
 assign [class="^Xchat$"] 4:chat

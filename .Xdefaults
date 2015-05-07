@@ -64,5 +64,7 @@ URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 URxvt*termName: screen-256color
 URxvt.termName: rxvt-unicode
-URxvt.title: terminal
+URxvt.title: term
 URxvt.iso14755: false
+URxvt.buffered: false
+URxvt*skipBuiltinGlyphs: true

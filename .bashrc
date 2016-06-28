@@ -78,7 +78,8 @@ export HISTSIZE=2000
 source $HOME/.git-prompt.sh
 if [[ $(tty) == *pts* ]]
 then
-  PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$Black\]\n\$ "
+  #PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$Black\]\n\$ "
+  PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$White\]\n\$ "
 else
   PS1="\[$Green\]\t\[$Red\]-\[$BGreen\]\u\[$BBlack\]@\[$BBlue\]\h\[$Yellow\]\[$Yellow\]\w\[\033[m\]\[$Magenta\]\$(__git_ps1)\[$White\]\n\$ "
 fi
@@ -96,4 +97,7 @@ alias l='ls --color=auto -la'
 alias vi='vim'
 alias ..='cd ..'
 alias ...='cd .. && cd ..'
+alias gitk='gitk --all &'
+alias gitgui='git gui &'
+alias isc='osc -A https://api.suse.de'
 
